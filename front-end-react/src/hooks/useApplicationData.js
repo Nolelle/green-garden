@@ -149,7 +149,7 @@ export default function useApplicationData() {
           ...prevState,
           gardensVegetables: data,
           garden: gardenID,
-          selected: false,
+          // selected: false,
         }));
       })
       .catch((err) => console.error(err));

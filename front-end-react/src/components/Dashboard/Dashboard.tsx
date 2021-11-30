@@ -44,6 +44,7 @@ export default function Dashboard(props: any) {
   } = props;
 
   const gardenId = state.garden;
+  console.log("selected", state.selected);
 
   useEffect(() => {
     if (!state.selected) {
