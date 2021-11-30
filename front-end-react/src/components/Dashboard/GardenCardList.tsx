@@ -2,18 +2,16 @@
 import React, { useState } from "react";
 // import Card from "../Card";
 import GardenCard from "../GardenCard";
-import classNames from 'classnames';
+import classNames from "classnames";
 
 export default function GardenCardList(props: any) {
-
   const { state, changeGarden, updateGardenVegetableState } = props;
 
-  
+  const [selected, setSelected] = useState(null);
 
-  const [selected, setSelected] = useState(null)
+  console.log("selected in gardencardlist", selected);
 
   const gardenList = state?.gardens?.map((garden: any) => (
-
     <GardenCard
       updateGardenVegetableState={updateGardenVegetableState}
       selected={selected}
@@ -27,9 +25,9 @@ export default function GardenCardList(props: any) {
   ));
 
   return (
-    <div className='garden-card'>
+    <div className="garden-card">
       {gardenList}
-      <div className='new-garden'></div>
+      <div className="new-garden"></div>
     </div>
-  )
+  );
 }
